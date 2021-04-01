@@ -37,13 +37,25 @@ return unescape(cValue);
       <br>
       <br>
       <script>
-        var cookie = getCookie("title");
+        var cookie = getCookie("title");//자동
         var myImage = new Image(300, 220);
 myImage.src = 'https://rawonik.github.io/wjdaksgmldr/img/' + cookie + '.png';
 document.body.appendChild(myImage);
       </script>
      <br>
      <br>
-     <div><object data="https://rawonik.github.io/wjdaksgmldr/webtoondata/1.txt"></object></div>
+     <div><object data="https://rawonik.github.io/wjdaksgmldr/webtoondata/1.txt"></object></div><!--여기 바꿔주셈--!>
+      <br>
+      <br>
+   <script>
+     function before(){
+     }
+   </script>
+     <input type='button' 
+         value='<-이전' 
+         onclick='before()'/>
+<input type='button' 
+         value='->이후' 
+         onclick='after()'/>
     </body>
 </html>
