@@ -7,4 +7,53 @@
       <img src="wjdaksgml.png" width="300" height="300">
       <br>
       <a href = "https://webstudy1.github.io/jungmanhee.com/a.html">정만희교 공식 웹사이트</a>
-        </div>
+      <script>
+function setCookie(cName, cValue, cDay){
+var expire = new Date();
+expire.setDate(expire.getDate() + cDay);
+cookies = cName + '=' + escape(cValue) + '; path=/ '; // 한글 깨짐을 막기위해 escape(cValue)를 합니다.
+if(typeof cDay != 'undefined') cookies += ';expires=' + expire.toGMTString() + ';';
+document.cookie = cookies;
+}
+
+
+
+// 쿠키 가져오기 함수
+function getCookie(cName) {
+cName = cName + '=';
+var cookieData = document.cookie;
+var start = cookieData.indexOf(cName);
+var cValue = '';
+if(start != -1){
+start += cName.length;
+var end = cookieData.indexOf(';', start);
+if(end == -1)end = cookieData.length;
+cValue = cookieData.substring(start, end);
+}
+return unescape(cValue);
+}
+        var cookie = getCookie("title");
+        function present(){
+        var cookie = getCookie("title");
+      cookie *=1;
+          document.write(cookie +  "화로 가기");
+        var e = 'https://rawonik.github.io/wjdaksgmldr/webtoon/' + cookie + '.html';
+       
+     }
+      function n(){ 
+         var input = prompt("몇화로 가실건가요(숫자만)");
+         var e = 'https://rawonik.github.io/wjdaksgmldr/webtoon/' + input + '.html';
+        location.href = e;
+     }
+      </script>
+      <input type='button' 
+         value='가기' 
+         onclick='present()'/>
+      <br>
+      <a href = "https://rawonik.github.io/wjdaksgmldr/webtoon/1.html">1화부터</a>
+      <br>
+      <input type='button' 
+         value='n화로 가기' 
+         onclick='n()'/>
+      </body>
+    </html>
