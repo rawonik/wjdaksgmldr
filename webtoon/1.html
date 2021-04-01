@@ -44,11 +44,21 @@ document.body.appendChild(myImage);
       </script>
      <br>
      <br>
-     <div><object data="https://rawonik.github.io/wjdaksgmldr/webtoondata/1.txt"></object></div><!--여기 바꿔주셈--!>
+     <div><object data="https://rawonik.github.io/wjdaksgmldr/webtoondata/1.txt"></object></div><!--여기 바꿔주셈-->
       <br>
       <br>
    <script>
      function before(){
+        var cookie = getCookie("title");
+        cookie = cookie -1;
+        var e = 'https://rawonik.github.io/wjdaksgmldr/webtoon' + cookie + '.html';
+        location.href = e;
+     }
+     function before(){
+        var cookie = getCookie("title");
+        cookie = cookie +1;
+        var e = 'https://rawonik.github.io/wjdaksgmldr/webtoon' + cookie + '.html';
+        location.href = e;
      }
    </script>
      <input type='button' 
