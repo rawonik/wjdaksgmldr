@@ -1,4 +1,4 @@
- <html>
+  <html>
   <head>
     <title>정만희 웹툰!</title>
   </head>
@@ -33,10 +33,16 @@ cValue = cookieData.substring(start, end);
 }
 return unescape(cValue);
 }
+       if(cookie!=0){
+       }
+       else{
+        setCookie("title", 1, 365);
+       }
         var cookie = getCookie("title");
        if(cookie!=0){
           document.write(cookie +  "화로 가기");
           }
+      
         function present(){
         var cookie = getCookie("title");
       cookie *=1;
