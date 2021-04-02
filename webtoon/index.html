@@ -44,21 +44,26 @@ document.body.appendChild(myImage);
      <br>
      <br>
        <script>
-          readFile2();
-         function readFile2(){ 
-            var cookie = getCookie("title");
-    var target = document.getElementById("https://rawonik.github.io/wjdaksgmldr/webtoondata/" + cookie + ".txt"); 
- 
-    var file = target.files[0];
-        if (!file) {
-            return;
+
+    function readTextFile(file) {
+        var rawFile = new XMLHttpRequest();
+        rawFile.open("GET", file, false);
+        rawFile.onreadystatechange = function () {
+            if(rawFile.readyState === 4)
+            {
+                if(rawFile.status === 200 || rawFile.status == 0)
+                {
+                    var allText = rawFile.responseText;
+                    document.write(allText);
+                }
+            }
+        };
+        rawFile.send(null);
     }
-    var reader = new FileReader();
-    reader.onload = function(e) {
-        fileData = e.target.result;
-    };
-    reader.readAsText(file, 'euc-kr');
-} 
+    var cookie = getCookie("title");
+    var e = "https://rawonik.github.io/wjdaksgmldr/webtoondata/" + cookie + ".txt";
+    readTextFile(e);
+
        </script>
       <br>
       <br>
