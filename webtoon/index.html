@@ -1,4 +1,4 @@
-    <!DOCTYPE HTML>
+     <!DOCTYPE HTML>
 <html>
     <head>
         <meta charset="utf-8">
@@ -44,7 +44,13 @@ return unescape(cValue);
       <br>
       <script>
         var cookie = getCookie("title");//자동
-        var myImage = new Image();
+	      var img = new Image();
+	      img.src = 'https://rawonik.github.io/wjdaksgmldr/img/' + cookie + '.png';
+img.onload = function() {
+  var w = this.width;
+  var h = this.height;
+}
+        var myImage = new Image(w,k);
 myImage.src = 'https://rawonik.github.io/wjdaksgmldr/img/' + cookie + '.png';
 document.body.appendChild(myImage);
       </script>
