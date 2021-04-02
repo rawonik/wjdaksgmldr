@@ -33,12 +33,13 @@ cValue = cookieData.substring(start, end);
 }
 return unescape(cValue);
 }
+        var cookie = getCookie("title");
        if(cookie!=0){
        }
        else{
         setCookie("title", 1, 365);
        }
-        var cookie = getCookie("title");
+        
        if(cookie!=0){
           document.write(cookie +  "화로 가기");
           }
@@ -47,13 +48,15 @@ return unescape(cValue);
         var cookie = getCookie("title");
       cookie *=1;
           if(cookie!=0){
-        var e = 'https://rawonik.github.io/wjdaksgmldr/webtoon/' + cookie + '.html';
+        var e = 'https://rawonik.github.io/wjdaksgmldr/webtoon/index.html';
+            setCookie("title", cookie, 365);
            location.href =e;
           }
       }
       function n(){ 
          var input = prompt("몇화로 가실건가요(숫자만)");
-         var e = 'https://rawonik.github.io/wjdaksgmldr/webtoon/' + input + '.html';
+         var e = 'https://rawonik.github.io/wjdaksgmldr/webtoon/index.html';
+         setCookie("title", cookie, 365);
         location.href = e;
      }
       </script>
