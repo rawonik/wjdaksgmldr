@@ -1,3 +1,2 @@
-# wjdaksgmldr
-버그났습니다
-지트 끝나고 고칠게요
+ # wjdaksgmldr
+디자인이 왜이래?
